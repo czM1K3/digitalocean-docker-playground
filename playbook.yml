@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+    - name: Update system
+      apt:
+        update_cache: yes
+    - name: Install apps
+      apt:
+        state: present
+        name:
+          - vim
+          - htop
+          - fish
+    - name: Set fish as default shell
+      user:
+        name: root
+        shell: /usr/bin/fish
+    - import_role: name=geerlingguy.docker
+      vars:
+        docker_install_compose: true
