@@ -4,7 +4,8 @@ Quick way to spin up VM on DigitalOcean with Docker installed
 ## Requirements
 - **Vagrant**
 - **Ansible**
-- Docker Ansible role (```ansible-galaxy install geerlingguy.docker```)
+- DigitalOcean plugin - ```vagrant plugin install vagrant-digitalocean```
+- Docker Ansible role - ```ansible-galaxy install geerlingguy.docker```
 
 
 ## Commands
